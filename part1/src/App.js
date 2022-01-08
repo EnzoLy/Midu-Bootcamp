@@ -1,20 +1,22 @@
-import './App.css'
-import Message from './components/Message.jsx'
+import React from 'react'
+import Title from './components/Title.jsx'
+import Paragraph from './components/Paragraph.jsx'
 
-const Description = () => {
-  return <p>This is a simple React App</p>;
-}
 
 const App = () => {
+  const exercises1 = 10
+  const exercises2 = 7
+  const exercises3 = 14
 
   return (
-    <div className="App">
-      <Message message="Hi" color="#000000"/>
-      <Message message="Como estas" color="#F58840"/>
-      <Message message="Todo bien?" color="#B85252"/>
-      <Description/>
+    <div>
+      <Title course = 'Half Stack application development'/>
+      <Paragraph part='Fundamentals of React' exercise='10' />
+      <Paragraph part='Using props to pass data' exercise='7' />
+      <Paragraph part='State of a component' exercise='14' />
+      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
     </div>
-  );
-};
+  )
+}
 
 export default App;
